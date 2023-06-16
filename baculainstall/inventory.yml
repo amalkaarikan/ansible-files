@@ -1,0 +1,2 @@
+[test-server1]
+10.60.22.184 ansible_port=6582 ansible_ssh_user=root
