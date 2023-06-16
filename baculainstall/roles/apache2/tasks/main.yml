@@ -1,0 +1,18 @@
+---
+- name: Install apache2 
+  apt:
+     name: apache2
+     state: present
+
+- name: Copy apache2 Configuration
+  copy:
+    src: amal.fingent.net.conf
+    dest: /etc/apache2/sites-enabled/amal.fingent.net.conf
+    owner: root
+    group: root
+    mode: 755
+    
+- name: Restart apache2 Service
+  service: 
+    name: apache2
+    state: restarted
